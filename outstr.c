@@ -1,9 +1,5 @@
 #include "main.h"
-#include <limits.h>
-#include <stdarg.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include <stdio.h>
+
 /**
  * outstr - a function that outputs strings
  * @s: a variable holding the value
