@@ -9,16 +9,16 @@
 
 void print_digits(int n, int *count)
 {
-        if (n < 10)
-        {
-                _putcharP(n + '0');
-                (*count)++;
-                return;
-        }
+	if (n < 10)
+	{
+		_putcharP(n + '0');
+		(*count)++;
+		return;
+	}
 
-        print_digits(n / 10, count);
-        _putcharP(n % 10 + '0');
-        (*count)++;
+	print_digits(n / 10, count);
+	_putcharP(n % 10 + '0');
+	(*count)++;
 }
 
 #include "main.h"
