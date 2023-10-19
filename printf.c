@@ -1,14 +1,11 @@
 #include "main.h"
-#include <stdlib.h>
-#include <stdio.h>
-#include <stdarg.h>
 
 /**
  * _printf - a function that outputs any input
  * @format: a variable holding the specifier
  * @...: allowance for called value
  * Return: count
-*/
+ */
 
 int _printf(const char *format, ...)
 {
@@ -29,7 +26,11 @@ int _printf(const char *format, ...)
 		else
 		{
 			i++;
-			total += handle_format(format[i], args) - 1;
+
+			if (format[i] == 'c' || format[i] == 's' || format[i] == '%')
+				total += handle_csp(format[i], args);
+			else if (format[i] == 'd' || format[i] == 'i')
+				total += handle_d(format[i], args);
 		}
 		total++;
 	}

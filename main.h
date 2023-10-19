@@ -13,5 +13,8 @@ int _putcharP(char c);
 int outstr(char *c);
 int outint(int n);
 int handle_format(char c, va_list args);
+int handle_csp(char format, va_list args);
+int handle_d(char format, va_list args);
+
 
 #endif
