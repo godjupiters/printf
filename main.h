@@ -15,5 +15,8 @@ int outint(int n);
 int handle_format(char c, va_list args);
 int handle_csp(char format, va_list args);
 int handle_d(char format, va_list args);
+int handle_format1(char c, va_list args);
+int handle_format2(char c, va_list args);
+
 
 #endif

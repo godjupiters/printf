@@ -26,7 +26,15 @@ int _printf(const char *format, ...)
 		else
 		{
 			i++;
-			total += handle_format(format[i], args) - 1;
+			if (format[i] == 'c' || format[i] == 's' || format[i] == '%')
+				total += handle_format1(format[i], args) - 1;
+			else if (format[i] == 'd' || format[i] == 'i')
+				total += handle_format2(format[i], args) - 1;
+			else
+			{
+				_putcharP('%');
+				_putcharP(format[i]);
+			}
 		}
 		total++;
 	}
