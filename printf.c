@@ -26,11 +26,7 @@ int _printf(const char *format, ...)
 		else
 		{
 			i++;
-
-			if (format[i] == 'c' || format[i] == 's' || format[i] == '%')
-				total += handle_csp(format[i], args);
-			else if (format[i] == 'd' || format[i] == 'i')
-				total += handle_d(format[i], args);
+			total += handle_format(format[i], args) - 1;
 		}
 		total++;
 	}
