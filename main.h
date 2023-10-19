@@ -12,5 +12,6 @@ int print_arg(char format, va_list args);
 int _putcharP(char c);
 int outstr(char *c);
 int outint(int n);
+int handle_format(char c, va_list args);
 
 #endif

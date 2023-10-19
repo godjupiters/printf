@@ -11,7 +11,7 @@
 
 int print_arg(char format, va_list args)
 {
-	int len = 0;
+	unsigned int len, total = 0;
 
 	switch (format)
 	{
@@ -25,6 +25,9 @@ int print_arg(char format, va_list args)
 			_putcharP('%');
 			break;
 		case 'd':
+			len = outint(va_arg(args, int));
+			total += (len - 1);
+			break;
 		case 'i':
 			len = outint(va_arg(args, int));
 			break;

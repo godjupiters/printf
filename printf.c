@@ -8,11 +8,11 @@
  * @format: a variable holding the specifier
  * @...: allowance for called value
  * Return: count
- */
+*/
 
 int _printf(const char *format, ...)
 {
-	unsigned int i, len, total = 0;
+	unsigned int i, total = 0;
 	va_list args;
 
 	if (!format || (format[0] == '%' && format[1] == '\0'))
@@ -29,8 +29,7 @@ int _printf(const char *format, ...)
 		else
 		{
 			i++;
-			len = print_arg(format[i], args);
-			total += (len - 1);
+			total += handle_format(format[i], args) - 1;
 		}
 		total++;
 	}
