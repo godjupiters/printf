@@ -10,4 +10,8 @@ s
 d
 i
 
- Project to be done in teams of 2 people (your team: Ugochukwu Daniel Ahuruonye, Abdurrahman Abdullahi Umar)
+
+This repository contains our custom implementation of the printf function in C. We've developed a specialized version that handles various format specifiers and conversion characters to print data effectively
+
+
+Project to be done in teams of 2 people (your team: Ugochukwu Daniel Ahuruonye, Abdurrahman Abdullahi Umar)
